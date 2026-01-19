@@ -8,7 +8,7 @@ public class Simulator {
     }
 
     public void runSimulator() {
-        scheduler.addProcess(new Process("A",5,3,1));
+        scheduler.addProcess(new Process("A",5,3,5));
         scheduler.runScheduler();
     }
 

@@ -14,14 +14,22 @@ public class Scheduler {
 
     //main method
     void runScheduler() {
-        if (processesReady.poll() == null) {
+        if (processesReady.peek() == null) {
             System.out.println("Não há processos para executar.");
             return;
+        } else {
+            processRunning = processesReady.poll();
+            processRunning.setState(Process.State.RUNNING);
         }
         while(!finishedRunning()){
-
+            if(processRunning.getCredit() > 0) {
+                processRunning.setCredit(processRunning.getCredit() - 1);
+                System.out.println("Processo "+processRunning.getName()+" usou CPU.");
+            } else {
+                processRunning = null;
+                System.out.println("Terminou de executar.");
+            }
         }
-        System.out.println("Todos os processos foram executados");
     }
 
     //other methods
@@ -40,6 +48,7 @@ public class Scheduler {
     boolean checkCreditFromProcessRunning() {
         return (processRunning.getCredit() > 0);
     }
+
 
 
 }

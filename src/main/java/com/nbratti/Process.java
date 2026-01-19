@@ -49,8 +49,11 @@ public class Process implements Comparable<Process> {
         this.credit = credit;
     }
 
-    public Comparable getPriority() {
-        return priority;
+    public void setState(State state) {
+        this.state = state;
     }
-    public void setPriority(Comparable priority) {}
+
+    public String getName() {
+        return name;
+    }
 }
