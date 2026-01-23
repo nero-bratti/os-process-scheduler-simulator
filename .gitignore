@@ -3,30 +3,30 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
+escalonador-de-processos-simulado/.idea/**/workspace.xml
+escalonador-de-processos-simulado/.idea/**/tasks.xml
+escalonador-de-processos-simulado/.idea/**/usage.statistics.xml
+escalonador-de-processos-simulado/.idea/**/dictionaries
+escalonador-de-processos-simulado/.idea/**/shelf
 
 # AWS User-specific
-.idea/**/aws.xml
+escalonador-de-processos-simulado/.idea/**/aws.xml
 
 # Generated files
-.idea/**/contentModel.xml
+escalonador-de-processos-simulado/.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-.idea/**/dbnavigator.xml
+escalonador-de-processos-simulado/.idea/**/dataSources/
+escalonador-de-processos-simulado/.idea/**/dataSources.ids
+escalonador-de-processos-simulado/.idea/**/dataSources.local.xml
+escalonador-de-processos-simulado/.idea/**/sqlDataSources.xml
+escalonador-de-processos-simulado/.idea/**/dynamic.xml
+escalonador-de-processos-simulado/.idea/**/uiDesigner.xml
+escalonador-de-processos-simulado/.idea/**/dbnavigator.xml
 
 # Gradle
-.idea/**/gradle.xml
-.idea/**/libraries
+escalonador-de-processos-simulado/.idea/**/gradle.xml
+escalonador-de-processos-simulado/.idea/**/libraries
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
@@ -45,7 +45,7 @@
 cmake-build-*/
 
 # Mongo Explorer plugin
-.idea/**/mongoSettings.xml
+escalonador-de-processos-simulado/.idea/**/mongoSettings.xml
 
 # File-based project format
 *.iws
@@ -60,10 +60,10 @@ out/
 atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
-.idea/replstate.xml
+escalonador-de-processos-simulado/.idea/replstate.xml
 
 # SonarLint plugin
-.idea/sonarlint/
+escalonador-de-processos-simulado/.idea/sonarlint/
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
@@ -72,10 +72,10 @@ crashlytics-build.properties
 fabric.properties
 
 # Editor-based Rest Client
-.idea/httpRequests
+escalonador-de-processos-simulado/.idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
-.idea/caches/build_file_checksums.ser
+escalonador-de-processos-simulado/.idea/caches/build_file_checksums.ser
 
 ### Java template
 # Compiled class file
@@ -103,3 +103,4 @@ fabric.properties
 hs_err_pid*
 replay_pid*
 
+/.idea/
