@@ -20,7 +20,6 @@ public class Scheduler {
             } else {
                 if (hasReadyProcess()) {
                     if (!readyProcessesQueue.peek().isAbleToRun()) {
-                        if (processRunning.hasCpuTimeRemaining()) requeueProcessToReady(processRunning);
                         distributeCredit();
                     }
                     pickReadyProcessAndRun();

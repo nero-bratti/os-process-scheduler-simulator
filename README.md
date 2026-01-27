@@ -1,5 +1,16 @@
-# ATUALMENTE EM PROGRESSO
-
-Neste repositório encontra-se o código da minha tentativa de desenvolver um simulador de escalonador de processos, baseado em um trabalho proposto na faculdade.
+# SOBRE ESTE REPOSITÓRIO
+Meu objetivo aqui é desenvolver um simulador de escalonador de processos,
+**baseado** em um trabalho proposto na faculdade.
 <br> <br>
-O objetivo não é que a implementação seja idêntica ao que está descrito no arquivo “tarefa.pdf”, mas sim utilizar o projeto como forma de praticar e desenvolver habilidades de programação.
+O objetivo ***não é*** que a implementação seja idêntica ao que está descrito no arquivo “tarefa.pdf”,
+e eu tenho planos de desenvolver ele para além do que está descrito neste, mas sim de fazer algo legal
+que me ajude a aprender coisas novas e desenvolver minhas habilidades.
+
+### TECNOLOGIAS USADAS E INFORMAÇÕES
+| A liguagem usada é | [![Java](https://img.shields.io/badge/Java-white?style=flat&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiNGNDQzMzYiIGQ9Ik0yMy42NSwyNC44OThjLTAuOTk4LTEuNjA5LTEuNzIyLTIuOTQzLTIuNzI1LTUuNDU1QzE5LjIyOSwxNS4yLDMxLjI0LDExLjM2NiwyNi4zNywzLjk5OWMyLjExMSw1LjA4OS03LjU3Nyw4LjIzNS04LjQ3NywxMi40NzNDMTcuMDcsMjAuMzcsMjMuNjQ1LDI0Ljg5OCwyMy42NSwyNC44OTh6Ii8%2BPHBhdGggZmlsbD0iI0Y0NDMzNiIgZD0iTTIzLjg3OCwxNy4yN2MtMC4xOTIsMi41MTYsMi4yMjksMy44NTcsMi4yOTksNS42OTVjMC4wNTYsMS40OTYtMS40NDcsMi43NDMtMS40NDcsMi43NDNzMi43MjgtMC41MzYsMy41NzktMi44MThjMC45NDUtMi41MzQtMS44MzQtNC4yNjktMS41NDgtNi4yOThjMC4yNjctMS45MzgsNi4wMzEtNS41NDMsNi4wMzEtNS41NDNTMjQuMzExLDExLjYxMSwyMy44NzgsMTcuMjd6Ii8%2BPGc%2BPHBhdGggZmlsbD0iIzE1NjVDMCIgZD0iTTMyLjA4NCAyNS4wNTVjMS43NTQtLjM5NCAzLjIzMy43MjMgMy4yMzMgMi4wMSAwIDIuOTAxLTQuMDIxIDUuNjQzLTQuMDIxIDUuNjQzczYuMjI1LS43NDIgNi4yMjUtNS41MDVDMzcuNTIxIDI0LjA1MyAzNC40NjQgMjMuMjY2IDMyLjA4NCAyNS4wNTV6TTI5LjEyOSAyNy4zOTVjMCAwIDEuOTQxLTEuMzgzIDIuNDU4LTEuOTAyLTQuNzYzIDEuMDExLTE1LjYzOCAxLjE0Ny0xNS42MzguMjY5IDAtLjgwOSAzLjUwNy0xLjYzOCAzLjUwNy0xLjYzOHMtNy43NzMtLjExMi03Ljc3MyAyLjE4MUMxMS42ODMgMjguNjk1IDIxLjg1OCAyOC44NjYgMjkuMTI5IDI3LjM5NXoiLz48cGF0aCBmaWxsPSIjMTU2NUMwIiBkPSJNMjcuOTM1LDI5LjU3MWMtNC41MDksMS40OTktMTIuODE0LDEuMDItMTAuMzU0LTAuOTkzYy0xLjE5OCwwLTIuOTc0LDAuOTYzLTIuOTc0LDEuODg5YzAsMS44NTcsOC45ODIsMy4yOTEsMTUuNjMsMC41NzJMMjcuOTM1LDI5LjU3MXoiLz48cGF0aCBmaWxsPSIjMTU2NUMwIiBkPSJNMTguNjg2LDMyLjczOWMtMS42MzYsMC0yLjY5NSwxLjA1NC0yLjY5NSwxLjgyMmMwLDIuMzkxLDkuNzYsMi42MzIsMTMuNjI3LDAuMjA1bC0yLjQ1OC0xLjYzMkMyNC4yNzEsMzQuNDA0LDE3LjAxNCwzNC41NzksMTguNjg2LDMyLjczOXoiLz48cGF0aCBmaWxsPSIjMTU2NUMwIiBkPSJNMzYuMjgxLDM2LjYzMmMwLTAuOTM2LTEuMDU1LTEuMzc3LTEuNDMzLTEuNTg4YzIuMjI4LDUuMzczLTIyLjMxNyw0Ljk1Ni0yMi4zMTcsMS43ODRjMC0wLjcyMSwxLjgwNy0xLjQyNywzLjQ3Ny0xLjA5M2wtMS40Mi0wLjgzOUMxMS4yNiwzNC4zNzQsOSwzNS44MzcsOSwzNy4wMTdDOSw0Mi41MiwzNi4yODEsNDIuMjU1LDM2LjI4MSwzNi42MzJ6Ii8%2BPHBhdGggZmlsbD0iIzE1NjVDMCIgZD0iTTM5LDM4LjYwNGMtNC4xNDYsNC4wOTUtMTQuNjU5LDUuNTg3LTI1LjIzMSwzLjA1N0MyNC4zNDEsNDYuMTY0LDM4Ljk1LDQzLjYyOCwzOSwzOC42MDR6Ii8%2BPC9nPjwvc3ZnPg%3D%3D&logoColor=dc524a&logoSize=auto&labelColor=white&color=%233a75b0)](https://www.java.com/) |
+|-|-|
+| Para manter as dependências | [![Apache Maven](https://img.shields.io/badge/Maven-003063?style=flat&logo=apachemaven&logoColor=cd2137&logoSize=auto&label=Apache&labelColor=white)](https://maven.apache.org/) |
+| Testes unitários (em progresso) com | [![JUnit](https://img.shields.io/badge/JUnit-%23208c55?style=flat&logo=junit5&logoColor=dc524a&logoSize=auto&labelColor=black&color=%23208c55)](https://junit.org/) |
+
+
+
