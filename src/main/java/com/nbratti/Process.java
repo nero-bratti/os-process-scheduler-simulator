@@ -1,27 +1,63 @@
 package com.nbratti;
 
-public class Process implements Comparable<Process> {
-    private String name;
-    private int estimatedCpuTimeRemaining;
-    private int order;
-    private int priority;
-    private int credit;
-    private enum State {
+public final class Process implements Comparable<Process> {
+    //inner classes
+    public enum State {
         READY,
         RUNNING,
         BLOCKED,
         EXIT
     }
+
+    //builder
+    public static final class ProcessBuilder {
+        private final String name;
+        private int estimatedCpuTimeRemaining;
+        private int order;
+        private int priority;
+
+        public ProcessBuilder(String name) {
+            this.name = name;
+        }
+
+        public ProcessBuilder estimatedCpuTimeRemaining(int estimatedCpuTimeRemaining) {
+            this.estimatedCpuTimeRemaining = estimatedCpuTimeRemaining;
+            return this;
+        }
+
+        public ProcessBuilder order(int order) {
+            this.order = order;
+            return this;
+        }
+
+        public ProcessBuilder priority(int priority) {
+            this.priority = priority;
+            return this;
+        }
+
+        public Process build() {
+            return new Process(this);
+        }
+    }
+    public static ProcessBuilder builder(String processName) {
+        return new ProcessBuilder(processName);
+    }
+
+    //variables
+    private final String name;
+    private int estimatedCpuTimeRemaining;
+    private int order;
+    private int priority;
+    private int credit;
     private State state;
 
-    //Constructor for a CPU bound process
-    public Process(String name, int estimatedCpuTimeRemaining, int order, int priority) {
-        state = State.READY;
-        this.name = name;
-        this.estimatedCpuTimeRemaining = estimatedCpuTimeRemaining;
-        this.order = order;
-        this.priority = priority;
+    private Process(ProcessBuilder processBuilder) {
+        this.name = processBuilder.name;
+        this.estimatedCpuTimeRemaining = processBuilder.estimatedCpuTimeRemaining;
+        this.priority = processBuilder.priority;
+        this.order = processBuilder.order;
         this.credit = priority;
+        this.state = State.READY;
     }
 
     /**
