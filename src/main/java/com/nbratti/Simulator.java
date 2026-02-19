@@ -9,10 +9,26 @@ public class Simulator {
 
     public void runSimulator() {
 
-        scheduler.addProcess(new Process("B",4,2,2));
-        scheduler.addProcess(new Process("C",2,3,3));
-        scheduler.addProcess(new Process("A",2,1,2));
-        scheduler.addProcess(new Process("D",2,7,1));
+        scheduler.addProcess(Process.builder("B")
+                .estimatedCpuTimeRemaining(4)
+                .order(2)
+                .priority(2)
+                .build());
+        scheduler.addProcess(Process.builder("C")
+                .estimatedCpuTimeRemaining(2)
+                .order(3)
+                .priority(3)
+                .build());
+        scheduler.addProcess(Process.builder("A")
+                .estimatedCpuTimeRemaining(2)
+                .order(1)
+                .priority(2)
+                .build());
+        scheduler.addProcess(Process.builder("D")
+                .estimatedCpuTimeRemaining(2)
+                .order(7)
+                .priority(1)
+                .build());
         scheduler.runScheduler();
     }
 }
